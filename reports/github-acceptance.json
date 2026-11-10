@@ -1,0 +1,223 @@
+{
+  "reportVersion": 1,
+  "testedAt": "2026-11-06T17:14:16.862711+08:00",
+  "repositories": [
+    {
+      "name": "stm32",
+      "url": "https://github.com/STMicroelectronics/STM32CubeF4",
+      "commit": "94cae6e83f00e276a11957e7833c01ac3d0bd7af"
+    },
+    {
+      "name": "gd32",
+      "url": "https://github.com/GigaDevice-GD32-MCU/GD32F4xx_Firmware_Library",
+      "commit": "10d02f4c8a7e1d79da8b2a9ad67b534f187ec936"
+    },
+    {
+      "name": "esp-idf",
+      "url": "https://github.com/espressif/esp-idf",
+      "commit": "ea1c174c1cbb7348bd8ba0ff1eb306246938dd80"
+    }
+  ],
+  "builds": [
+    {
+      "projectId": "stm32-gpio",
+      "action": "all",
+      "outputFormat": "bin",
+      "warnings": 0,
+      "elapsedSeconds": 4.31,
+      "artifacts": [
+        {
+          "kind": "application",
+          "filename": "STM32-GPIO-application.bin",
+          "bytes": 3540,
+          "sha256": "06dc4febccf9450ba67004c5aa1299441fb317d222c158e80a12a239101fc903",
+          "retainedAfterAcceptance": false
+        }
+      ]
+    },
+    {
+      "projectId": "stm32-gpio",
+      "action": "all",
+      "outputFormat": "hex",
+      "warnings": 0,
+      "elapsedSeconds": 4.36,
+      "artifacts": [
+        {
+          "kind": "application",
+          "filename": "STM32-GPIO-application.hex",
+          "bytes": 10017,
+          "sha256": "d466f17fa37eab20c848fb024e3e7e29933c3de3091d531d9a59e019c4b36f6b",
+          "retainedAfterAcceptance": false
+        }
+      ]
+    },
+    {
+      "projectId": "stm32-gpio",
+      "action": "all",
+      "outputFormat": "axf",
+      "warnings": 0,
+      "elapsedSeconds": 4.38,
+      "artifacts": [
+        {
+          "kind": "application",
+          "filename": "STM32-GPIO-application.axf",
+          "bytes": 790796,
+          "sha256": "22d182ac1bc8de732fc0fcf4567ff6e6471026caa078f45a1b8ec0470ce1c9b5",
+          "retainedAfterAcceptance": false
+        }
+      ]
+    },
+    {
+      "projectId": "gd32-template",
+      "action": "all",
+      "outputFormat": "hex",
+      "warnings": 0,
+      "elapsedSeconds": 3.49,
+      "artifacts": [
+        {
+          "kind": "application",
+          "filename": "GD32-Template-application.hex",
+          "bytes": 10528,
+          "sha256": "421d838f668bd77e2d5aff7d55247f6342e6fdbd13e2eaf59e86786ba5447863",
+          "retainedAfterAcceptance": false
+        }
+      ]
+    },
+    {
+      "projectId": "gd32-template",
+      "action": "all",
+      "outputFormat": "bin",
+      "warnings": 0,
+      "elapsedSeconds": 3.82,
+      "artifacts": [
+        {
+          "kind": "application",
+          "filename": "GD32-Template-application.bin",
+          "bytes": 3724,
+          "sha256": "c0d6f22d7ad2b7c839bc73d81b9e986d914a14a896393d306ba353a1a8de4eaf",
+          "retainedAfterAcceptance": false
+        }
+      ]
+    },
+    {
+      "projectId": "esp32-hello",
+      "action": "all",
+      "outputFormat": null,
+      "warnings": 2,
+      "elapsedSeconds": 17.49,
+      "artifacts": [
+        {
+          "kind": "factory",
+          "filename": "ESP32-Hello-factory.bin",
+          "bytes": 227024,
+          "sha256": "c350985d343f2b8105b4a4e288f379cf20af3323cda7c7d8af0ae79cf8889fb4",
+          "retainedAfterAcceptance": false
+        },
+        {
+          "kind": "application",
+          "filename": "ESP32-Hello-application.bin",
+          "bytes": 161488,
+          "sha256": "60a95ab25d8ff1590faec5dc3d06bb35430392dea69da053ec4241c7d0cd2a36",
+          "retainedAfterAcceptance": false
+        }
+      ]
+    },
+    {
+      "projectId": "esp32-hello",
+      "action": "factory",
+      "outputFormat": null,
+      "warnings": 2,
+      "elapsedSeconds": 10.45,
+      "artifacts": [
+        {
+          "kind": "factory",
+          "filename": "ESP32-Hello-factory.bin",
+          "bytes": 227024,
+          "sha256": "c350985d343f2b8105b4a4e288f379cf20af3323cda7c7d8af0ae79cf8889fb4",
+          "retainedAfterAcceptance": false
+        }
+      ]
+    },
+    {
+      "projectId": "esp32-ota",
+      "action": "upgrade",
+      "outputFormat": null,
+      "warnings": 1,
+      "elapsedSeconds": 7.45,
+      "artifacts": [
+        {
+          "kind": "upgrade",
+          "filename": "ESP32-OTA-upgrade.bin",
+          "bytes": 887600,
+          "sha256": "dafa97d9c598d0b69557f177abaf08c97dd1795e3696bbbf11647a43989d7fd2",
+          "retainedAfterAcceptance": false
+        }
+      ]
+    },
+    {
+      "projectId": "esp32-ota",
+      "action": "all",
+      "outputFormat": null,
+      "warnings": 2,
+      "elapsedSeconds": 19.79,
+      "artifacts": [
+        {
+          "kind": "factory",
+          "filename": "ESP32-OTA-factory.bin",
+          "bytes": 953136,
+          "sha256": "e13b2828fcdd2203df50ed8aafb30ee82d7663683a5cfc67624369fcd72326ee",
+          "retainedAfterAcceptance": false
+        },
+        {
+          "kind": "upgrade",
+          "filename": "ESP32-OTA-upgrade.bin",
+          "bytes": 887600,
+          "sha256": "dafa97d9c598d0b69557f177abaf08c97dd1795e3696bbbf11647a43989d7fd2",
+          "retainedAfterAcceptance": false
+        }
+      ]
+    },
+    {
+      "projectId": "esp32-ota",
+      "action": "factory",
+      "outputFormat": null,
+      "warnings": 2,
+      "elapsedSeconds": 12.4,
+      "artifacts": [
+        {
+          "kind": "factory",
+          "filename": "ESP32-OTA-factory.bin",
+          "bytes": 953136,
+          "sha256": "e13b2828fcdd2203df50ed8aafb30ee82d7663683a5cfc67624369fcd72326ee",
+          "retainedAfterAcceptance": false
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "ESP-IDF examples copied with identical C/H sources into short temporary directories for Windows GCC",
+    "ESP-IDF OTA application builds with bootloader.bin absent",
+    "Actual ESP-IDF #error failure restores previous app and exports no BIN",
+    "All HEX records have correct byte count, checksum and EOF",
+    "All factory images match every partition offset from flasher_args.json",
+    "Keil outputs are linked Arm ELF images; all delivered SHA256 values match",
+    "Downloaded repository tracked sources match the selected commits"
+  ],
+  "faultInjection": {
+    "code": "BUILD_FAILED",
+    "previousImageRestored": true,
+    "failedRunExportedNoBin": true
+  },
+  "cliRegressionAtBuildAcceptance": {
+    "tests": 22,
+    "passed": 22,
+    "failed": 0
+  },
+  "temporaryDataCleanup": {
+    "complete": true,
+    "cleanedAt": "2026-11-06T17:21:28.1705559+08:00",
+    "temporaryDriveRemoved": true,
+    "checkoutsAndSdkRemoved": true
+  },
+  "rawLogs": "Stored in the operator local validation archive"
+}

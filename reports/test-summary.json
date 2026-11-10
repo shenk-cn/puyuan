@@ -1,0 +1,117 @@
+{
+  "documentation": {
+    "tests": 6,
+    "passed": 6,
+    "failed": 0
+  },
+  "failureFixes": [
+    "Corrupt Keil XML returns PROJECT_INVALID",
+    "Timed-out process trees retain stdout and stderr before BUILD_TIMEOUT"
+  ],
+  "testedAt": "2026-11-10",
+  "checks": [
+    "Public Markdown uses generic project names and portable paths",
+    "All example JSON and documented JSON blocks pass runtime schemas",
+    "PowerShell snippets parse",
+    "Runtime error codes have documentation",
+    "Entry points, interactive menu, schema titles and documentation use Puyuan",
+    "Relative links and section anchors resolve",
+    "Interactive menu and environment guidance point to existing local documents",
+    "All ten complete configuration examples are included in the consolidated README",
+    "CommonMark structure and UTF-8 text checks pass for all seven Markdown documents",
+    "English source comments and docstrings verified",
+    "English and Chinese READMEs share navigation anchors and complete JSON configurations",
+    "Source-only publication candidate excludes local configuration, outputs and logs",
+    "Default English and explicit Chinese menu startup verified",
+    "Language toggle persists in local configuration and survives environment detection",
+    "CLI language overrides saved preferences without changing them",
+    "Both menu languages build all, factory and upgrade actions and display failure prompts",
+    "Invalid language arguments and configuration values are rejected",
+    "Bilingual menu keys and format placeholders are complete",
+    "Official skill validator passes for both published and installed copies",
+    "Independent installed-skill forward test validates and previews five registered projects",
+    "Five registered projects compile through Puyuan; seven delivered artifacts match size and SHA256",
+    "Registered-project HEX records pass byte-count, checksum and EOF validation",
+    "Current source and filenames contain only the Puyuan identity",
+    "PUYUAN_HOME discovers the installed skill and all five registered projects validate with nine action previews",
+    "Local configuration and archived firmware/log files retain their original SHA256 after directory migration"
+  ],
+  "cli": {
+    "tests": 33,
+    "passed": 33,
+    "failed": 0
+  },
+  "project": "Puyuan",
+  "documentationStructure": {
+    "markdownFiles": 7,
+    "mainGuide": "README.md",
+    "chineseGuide": "README.zh-CN.md"
+  },
+  "publicationCheck": {
+    "license": "Apache-2.0",
+    "candidateFiles": 37,
+    "obviousPrivateDataMatches": 0,
+    "cleanCopyTests": {
+      "cli": {
+        "tests": 33,
+        "passed": 30,
+        "skipped": 3,
+        "failed": 0
+      },
+      "documentation": {
+        "tests": 6,
+        "passed": 6,
+        "skipped": 0,
+        "failed": 0
+      }
+    },
+    "licenseSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  "skillIntegration": {
+    "skill": "puyuan",
+    "source": "skills/puyuan/SKILL.md",
+    "scope": "user",
+    "installedSourceMatches": true,
+    "sourceSha256": "55a89e061fc3d4a765e72efb50670bcd4f2190e26a5d5b7faa2d447968493733",
+    "installationDiscovery": "Windows user-level PUYUAN_HOME",
+    "independentPreviewProjects": 5,
+    "successfulProjectBuilds": 5,
+    "verifiedArtifacts": 7,
+    "builders": {
+      "firmware-script": 2,
+      "keil": 3
+    },
+    "artifactPurposes": {
+      "factory": 2,
+      "upgrade": 2,
+      "application": 3
+    },
+    "compilerWarnings": 2579,
+    "firmwareSourcesUnchanged": true,
+    "deviceFlashingPerformed": false,
+    "realBuildEvidenceDate": "2026-11-09",
+    "independentPreviewEvidenceDate": "2026-11-09"
+  },
+  "renameAcceptance": {
+    "testedAt": "2026-11-10",
+    "project": "Puyuan",
+    "publicRepository": "https://github.com/shenk-cn/puyuan",
+    "cli": {
+      "tests": 33,
+      "passed": 33,
+      "failed": 0
+    },
+    "documentation": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "registeredProjectsValidated": 5,
+    "supportedActionsPreviewed": 9,
+    "preservedLocalFiles": 34,
+    "installedSkillMatches": true,
+    "skillSha256": "55a89e061fc3d4a765e72efb50670bcd4f2190e26a5d5b7faa2d447968493733",
+    "realSdkBuildsRepeated": false,
+    "deviceFlashingPerformed": false
+  }
+}

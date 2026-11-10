@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "outputDirectory": "outputs",
+  "projects": [
+    {
+      "id": "board",
+      "name": "PlatformIO board",
+      "projectName": "Board",
+      "path": "C:/work/pio-board",
+      "builder": "command",
+      "commands": {
+        "all": {
+          "executable": "C:/Windows/System32/cmd.exe",
+          "arguments": [
+            "/d",
+            "/s",
+            "/c",
+            "pio run -e esp32dev -t clean && pio run -e esp32dev"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "kind": "application",
+          "source": ".pio/build/esp32dev/firmware.bin",
+          "name": "{project}.{ext}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "python": "C:/Python313/python.exe",
+  "toolchains": [
+    {
+      "id": "keil-local",
+      "kind": "keil",
+      "root": "C:/Keil_v5"
+    },
+    {
+      "id": "idf-local",
+      "kind": "esp-idf",
+      "root": "C:/Espressif/esp-idf-v5.4.3",
+      "toolsPath": "C:/Espressif/tools"
+    }
+  ],
+  "language": "en"
+}

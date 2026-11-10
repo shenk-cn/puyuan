@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "outputDirectory": "outputs",
+  "projects": [
+    {
+      "id": "board",
+      "name": "Make board",
+      "projectName": "Board",
+      "path": "C:/work/make-board",
+      "builder": "command",
+      "commands": {
+        "all": {
+          "executable": "make.exe",
+          "arguments": [
+            "--always-make",
+            "all"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "kind": "application",
+          "source": "build/firmware.bin",
+          "name": "{project}.{ext}"
+        }
+      ]
+    }
+  ]
+}

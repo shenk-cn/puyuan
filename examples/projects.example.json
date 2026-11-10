@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "outputDirectory": "outputs",
+  "projects": [
+    {
+      "id": "board",
+      "name": "Board",
+      "path": "C:/work/board",
+      "builder": "keil"
+    }
+  ]
+}

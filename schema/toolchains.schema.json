@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Puyuan local tools v1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schemaVersion", "toolchains"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schemaVersion": {"type": "integer", "enum": [1]},
+    "language": {"type": "string", "enum": ["en", "zh-CN"], "default": "en"},
+    "python": {"type": "string", "minLength": 1},
+    "toolchains": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "kind", "root"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]*$"},
+          "kind": {"type": "string", "enum": ["keil", "cubeide", "esp-idf"]},
+          "root": {"type": "string", "minLength": 1},
+          "compilerRoot": {"type": "string", "minLength": 1},
+          "toolsPath": {"type": "string", "minLength": 1},
+          "python": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

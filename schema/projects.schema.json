@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Puyuan projects v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "projects"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schemaVersion": {"type": "integer", "enum": [1]},
+    "outputDirectory": {"type": "string", "minLength": 1},
+    "defaultName": {"type": "string", "minLength": 1},
+    "projects": {"type": "array", "items": {"$ref": "#/definitions/project"}}
+  },
+  "definitions": {
+    "version": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "value": {"type": "string", "minLength": 1},
+        "file": {"type": "string", "minLength": 1},
+        "pattern": {"type": "string", "minLength": 1}
+      }
+    },
+    "artifact": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "source"],
+      "properties": {
+        "kind": {"type": "string", "enum": ["application", "factory", "upgrade"]},
+        "source": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1}
+      }
+    },
+    "command": {
+      "type": "object", "additionalProperties": false,
+      "required": ["executable", "arguments"],
+      "properties": {
+        "executable": {"type": "string", "minLength": 1},
+        "arguments": {"type": "array", "items": {"type": "string"}},
+        "successCodes": {"type": "array", "minItems": 1, "items": {"type": "integer"}}
+      }
+    },
+    "commands": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "all": {"$ref": "#/definitions/command"},
+        "factory": {"$ref": "#/definitions/command"},
+        "upgrade": {"$ref": "#/definitions/command"}
+      }
+    },
+    "project": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "name", "path", "builder"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]*$"},
+        "name": {"type": "string", "minLength": 1},
+        "projectName": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "minLength": 1},
+        "builder": {"type": "string", "enum": ["keil", "firmware-script", "command", "esp-idf"]},
+        "outputFormat": {"type": "string", "enum": ["hex", "bin", "axf"]},
+        "outputName": {"type": "string", "minLength": 1},
+        "buildDirectory": {"type": "string", "minLength": 1},
+        "projectFile": {"type": "string", "minLength": 1},
+        "target": {"type": "string", "minLength": 1},
+        "toolchain": {"type": "string", "minLength": 1},
+        "version": {"$ref": "#/definitions/version"},
+        "script": {"type": "string", "minLength": 1},
+        "upgradeEnvelope": {"type": "string", "enum": ["envelope-v1"]},
+        "keilLog": {"type": "string", "minLength": 1},
+        "commands": {"$ref": "#/definitions/commands"},
+        "artifacts": {"type": "array", "minItems": 1, "items": {"$ref": "#/definitions/artifact"}}
+      }
+    }
+  }
+}

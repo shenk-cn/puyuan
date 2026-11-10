@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "outputDirectory": "outputs",
+  "projects": [
+    {
+      "id": "board",
+      "name": "CMake board",
+      "projectName": "Board",
+      "path": "C:/work/cmake-board",
+      "builder": "command",
+      "commands": {
+        "all": {
+          "executable": "C:/Windows/System32/cmd.exe",
+          "arguments": [
+            "/d",
+            "/s",
+            "/c",
+            "\"C:/Tools/CMake/bin/cmake.exe\" -S \"{root}\" -B \"{root}/build\" -G Ninja -DCMAKE_TOOLCHAIN_FILE=\"{root}/cmake/arm-gcc.cmake\" && \"C:/Tools/CMake/bin/cmake.exe\" --build \"{root}/build\" --clean-first"
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "kind": "application",
+          "source": "build/Board.elf",
+          "name": "{project}.{ext}"
+        }
+      ]
+    }
+  ]
+}

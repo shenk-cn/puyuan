@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "outputDirectory": "outputs",
+  "projects": [
+    {
+      "id": "board",
+      "name": "Board firmware",
+      "projectName": "Board",
+      "path": "C:/work/board",
+      "builder": "firmware-script",
+      "projectFile": "MDK-ARM/Board.uvprojx",
+      "target": "Board",
+      "script": "tools/firmware.py",
+      "keilLog": "MDK-ARM/build-upgrade.log",
+      "upgradeEnvelope": "envelope-v1",
+      "version": {
+        "file": "User_Driver/boot_update.h",
+        "pattern": "(?m)^#define\\s+BOARD_FW_VERSION\\s+\"[^,]+,([^\"]+)\""
+      },
+      "artifacts": [
+        {
+          "kind": "factory",
+          "source": "{outputDir}/factory-{version}.hex",
+          "name": "{project}-factory-{version}.{ext}"
+        },
+        {
+          "kind": "upgrade",
+          "source": "{outputDir}/mcu-{version}.bin",
+          "name": "{project}-upgrade-{version}.{ext}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "outputDirectory": "outputs",
+  "projects": [
+    {
+      "id": "board",
+      "name": "Development board",
+      "projectName": "Board",
+      "path": "C:/work/board",
+      "builder": "keil",
+      "projectFile": "MDK-ARM/Board.uvprojx",
+      "target": "Release",
+      "toolchain": "keil-local",
+      "outputFormat": "hex",
+      "version": {
+        "file": "include/version.h",
+        "pattern": "(?m)^#define\\s+BOARD_VERSION\\s+\"([^\"]+)\""
+      },
+      "artifacts": [
+        {
+          "kind": "application",
+          "source": "{outputDir}/{outputName}.hex",
+          "name": "{project}-{version}.{ext}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "outputDirectory": "outputs",
+  "projects": [
+    {
+      "id": "board",
+      "name": "CubeIDE board",
+      "projectName": "Board",
+      "path": "C:/work/cubeide-board",
+      "builder": "command",
+      "commands": {
+        "all": {
+          "executable": "C:/Windows/System32/cmd.exe",
+          "arguments": [
+            "/d",
+            "/s",
+            "/c",
+            "call \"C:/ST/STM32CubeIDE/STM32CubeIDE/headless-build.bat\" -data \"{root}/.builder-workspace\" -import \"{root}\" -cleanBuild \"Board/Release\""
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "kind": "application",
+          "source": "Release/Board.elf",
+          "name": "{project}.{ext}"
+        }
+      ]
+    }
+  ]
+}

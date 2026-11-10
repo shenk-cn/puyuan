@@ -1,0 +1,7 @@
+/projects.json
+/toolchains.local.json
+/outputs/
+/reports/github-logs/
+/reports/*.log
+__pycache__/
+*.py[cod]

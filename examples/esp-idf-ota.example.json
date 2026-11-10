@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "outputDirectory": "outputs",
+  "projects": [
+    {
+      "id": "sensor",
+      "name": "ESP32 sensor",
+      "projectName": "Sensor",
+      "path": "C:/work/sensor",
+      "builder": "esp-idf",
+      "target": "esp32",
+      "toolchain": "idf-local",
+      "artifacts": [
+        {
+          "kind": "factory",
+          "source": "{outputDir}/merged-flash.bin",
+          "name": "{project}-factory.{ext}"
+        },
+        {
+          "kind": "upgrade",
+          "source": "{outputDir}/{outputName}.bin",
+          "name": "{project}-upgrade.{ext}"
+        }
+      ]
+    }
+  ]
+}
